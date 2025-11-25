@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/* --------------------
+        全体
+-------------------- */
+
+:root {
+  --theme-color: #0099ff;
+  --sub-color: #333333;
+  
+  --font-jp: "Noto Sans JP";
+  --font-an: "Outfit";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: var(--sub-color);
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: var(--font-an), var(--font-jp), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+image, img {
+  width: 100%
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+div {
+  margin-bottom: 50px;
+}
+
+.right-span {
+  float: right;
+}
+
+/* --------------------
+          ヘッダー
+-------------------- */
+
+header {
+  background-color: var(--theme-color);
+  color: #fff;
+  width: 100%;
+  height: 7em;
+  padding: 8px 30px;
+}
+
+.header-title {
+  color: #fff;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* --------------------
+        見出し
+-------------------- */
+
+h2 {
+  padding: 0.75em;/*文字周りの余白*/
+  color: var(--sub-color);/*文字色*/
+  background: #f3f3f3;/*背景色*/
+  border-left: solid 5px var(--theme-color);/*左線（実線 太さ 色）*/
+}
+
+h3 {
+  padding: 0.03em 0.5em;/*上下 左右の余白*/
+  color: var(--sub-color);/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px var(--theme-color);/*左線*/
+  border-top: 70%;
+}
+
+/* --------------------
+        リンク
+-------------------- */
+
+a {
+  color: var(--theme-color);
+  text-decoration: none;
+}
+
+/* --------------------
+        リスト
+-------------------- */
+
+ul {
+  padding-left: 5px;
+  list-style: none;
+}
+
+li {
+  padding-left: 0px;
+  list-style: none;
+}
+
+li:before {
+  content: "・";
+  color: var(--theme-color);
+}
+
+ol:before {
+  content: "- ";
+  color: var(--sub-color);
+}
+
+/* --------------------
+          表
+-------------------- */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: solid 1px #f0f0f0;
+  width: 100%;
+  min-width: 40%;
+}
+tr {
+  background-color: #fff;
+}
+tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+th {
+  background: var(--theme-color);
+  color: #fff;
+}
+th {
+  border: solid 1px #f0f0f0;
+  padding: 1rem 0.5rem;
+}
+td {
+  border: solid 1px #f0f0f0;
+  padding: 1rem 1rem;
+}
+
+/* --------------------
+          フッター
+-------------------- */
+
+footer {
+  width: 100%;
+  padding: 4em;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
