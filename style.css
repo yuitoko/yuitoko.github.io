@@ -145,7 +145,7 @@ ul li::marker {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: var(--theme-color);
+  background: var(--sub-color);
   color: white;
   padding: 0.3em 0.6em;
   font-size: 0.8rem;
@@ -222,9 +222,9 @@ td {
 
 footer {
   width: 100%;
-  padding: 4em 40px;
+  padding: 2.5em 40px;
   font-size: 15px;
-  color: #999;
-  background: #fff;
+  color: #8c9aa7;
+  background: #f1f5f9;
   border-top: 1px solid #e5e7eb;
 }
