@@ -5,8 +5,8 @@
 -------------------- */
 
 :root {
-  --theme-color: #0099ff;
-  --sub-color: #333333;
+  --theme-color: #333333;
+  --sub-color: #666666;
   
   --font-jp: "Noto Sans JP";
   --font-an: "Outfit";
@@ -224,7 +224,7 @@ footer {
   width: 100%;
   padding: 2.5em 40px;
   font-size: 15px;
-  color: #8c9aa7;
-  background: #f1f5f9;
+  color: #aaaaaa;
+  background: #f6f6f6;
   border-top: 1px solid #e5e7eb;
 }
