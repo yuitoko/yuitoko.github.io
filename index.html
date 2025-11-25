@@ -15,7 +15,6 @@
 <body>
   <header>
     <div class="header-inner">
-
       <h1>Portforio｜ユイト</h1>
     </div>
   </header>
@@ -23,7 +22,7 @@
   <main>
     <section>
       <div>
-        <img src="image.jpg" alt="">
+        <img src="./assets/img/image.jpg" alt="">
       </div>
     </section>
 
@@ -49,7 +48,7 @@
       </div>
     
       <div>
-        <h3>音楽</h3>
+        <h3 class="mark">音楽</h3>
         <ul>
           <li>ピアノ（歴10年以上）</li>
           <li>耳コピ（その場で聴いたフレーズをその場で再現すること）</li>
@@ -57,7 +56,7 @@
       </div>
 
       <div>
-        <h3>創作</h3>
+        <h3 class="mark">創作</h3>
         <ul>
           <li>Adobe Photoshop</li>
           <li>Adobe Illustrator</li>
@@ -101,18 +100,61 @@
 
     <section>
       <div>
+        <h2>制作物</h2>
+        <p>大学の授業で制作したものを紹介します。</p>
+      </div>
+      <div class="card-list">
+        <div class="card">
+          <span class="tag">Web</span>
+          <img src="./assets/img/assessment.jpg" alt="">
+          <div class="card-contents">
+            <h3>診断系サイト</h3>
+            <p>あなたの良いところを診断するサイトです。HTMLとCSS、JavaScriptを使って制作しました。</p>
+          </div>
+          <a href="https://yuitoko.github.io/assessment/assessment.html" class="read-more">診断してみる</a>
+        </div>
+        <div class="card">
+          <span class="tag">Web</span>
+          <img src="./assets/img/portfolio.jpg" alt="">
+          <div class="card-contents">
+            <h3>ポートフォリオサイト</h3>
+            <p>僕のポートフォリオサイトです。HTMLとCSSを使って制作しました。</p>
+          </div>
+          <a href="https://github.com/yuitoko/yuitoko.github.io" class="read-more">GitHubを見る</a>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3 class="mark">Open Processingの作品</h3>
+          <p>
+            Open Processingというサイトで公開しているJavaScriptで作った黒板です。<br>
+            マウスのクリックで、虹色の絵を描くことができます。
+          </p>
+        </div>
+        <div>
+          <iframe
+            src="https://openprocessing.org/sketch/2806211/embed/"
+            width="400"
+            height="500"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div>
         <h2>History</h2>
         <p>これまでの音楽&創作遍歴をまとめました。</p>
       </div>
       <div>
         <table>
-
           <tr>
             <th>2010</th>
-            <td>ピアノを習い始める。</td>
+            <td>音楽教室に通い始める。ピアノを習い始めたのは、2011～12年頃。</td>
           </tr>
           <tr>
-            <th>2014</th>
+            <th>2013</th>
             <td>耳コピしたフレーズを、少しだけピアノで弾けるようになる。</td>
           </tr>
           <tr>
@@ -133,17 +175,19 @@
           </tr>
           <tr>
             <th>2025</th>
-            <td>耳コピで自由自在にピアノが弾きこなせるようになる。</td>
+            <td>
+              <p>耳コピで自由自在にピアノが弾きこなせるようになる。</p>
+              <p>HTMLやCSS, JavaScriptを本格的に学び始め、初めてインターネットでイチから作ったサイトを公開した。</p>
+            </td>
           </tr>
         </table>
       </div>
     </section>
   </main>
   
-
   <footer>
     © yuitoko
-    <span class="right-span">最終更新：2025.11.25</span>
+    <span class="right-span">2025.11.25</span>
   </footer>
 </body>
 </html>

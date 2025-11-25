@@ -34,7 +34,7 @@ body {
   font-style: normal;
 }
 
-image, img {
+image, img, iframe {
   width: 100%
 }
 
@@ -82,10 +82,10 @@ h2 {
   padding: 0.75em;/*文字周りの余白*/
   color: var(--sub-color);/*文字色*/
   background: #f3f3f3;/*背景色*/
-  border-left: solid 5px var(--theme-color);/*左線（実線 太さ 色）*/
+  border-left: solid 8px var(--theme-color);/*左線（実線 太さ 色）*/
 }
 
-h3 {
+h3.mark {
   padding: 0.03em 0.5em;/*上下 左右の余白*/
   color: var(--sub-color);/*文字色*/
   background: transparent;/*背景透明に*/
@@ -106,24 +106,84 @@ a {
         リスト
 -------------------- */
 
-ul {
-  padding-left: 5px;
-  list-style: none;
+ul li::marker {
+  left: -10px;
+  color: var(--theme-color);  /* 点の色をピンク系に変更 */
 }
 
-li {
-  padding-left: 0px;
-  list-style: none;
+/* --------------------
+          カード
+-------------------- */
+
+/* カードリスト */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
 }
 
-li:before {
-  content: "・";
-  color: var(--theme-color);
+/* カード */
+.card {
+  position: relative;
+  background: #f3f3f3;
+  border-radius: 10px;
+  flex-basis: 300px;
+  flex-grow: 1;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
-ol:before {
-  content: "- ";
-  color: var(--sub-color);
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* タグ */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--theme-color);
+  color: white;
+  padding: 0.3em 0.6em;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+/* カード中身 */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.card-contents {
+  margin: 0 1rem;
+  flex-grow: 1;
+}
+
+/* ボタン */
+.read-more {
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  background:var(--sub-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background: #999;
 }
 
 /* --------------------
@@ -162,7 +222,7 @@ td {
 
 footer {
   width: 100%;
-  padding: 4em;
+  padding: 4em 40px;
   font-size: 15px;
   color: #999;
   background: #fff;
