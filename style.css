@@ -5,8 +5,9 @@
 -------------------- */
 
 :root {
-  --theme-color: #333333;
-  --sub-color: #666666;
+  --theme-color: #0098aa;
+  --sub-color: #0079a8;
+  --text-color: #333;
   
   --font-jp: "Noto Sans JP";
   --font-an: "Outfit";
@@ -24,7 +25,7 @@ html, body {
 }
 
 body {
-  color: var(--sub-color);
+  color: var(--text-color);
   padding: 0;
   margin-right: auto;
   margin-left: auto;
@@ -75,22 +76,30 @@ header {
 }
 
 /* --------------------
-        見出し
+        テキスト
 -------------------- */
+h1 {
+  font-weight: 900;
+}
 
 h2 {
   padding: 0.75em;/*文字周りの余白*/
-  color: var(--sub-color);/*文字色*/
+  color: var(--text-color);/*文字色*/
   background: #f3f3f3;/*背景色*/
   border-left: solid 8px var(--theme-color);/*左線（実線 太さ 色）*/
+  font-weight: 900;
 }
 
 h3.mark {
   padding: 0.03em 0.5em;/*上下 左右の余白*/
-  color: var(--sub-color);/*文字色*/
+  color: var(--text-color);/*文字色*/
   background: transparent;/*背景透明に*/
   border-left: solid 5px var(--theme-color);/*左線*/
   border-top: 70%;
+}
+
+.text {
+  font-weight: 400;
 }
 
 /* --------------------
@@ -99,7 +108,21 @@ h3.mark {
 
 a {
   color: var(--theme-color);
+  font-weight: bold;
   text-decoration: none;
+  display: inline;
+  background-image: linear-gradient(90deg, var(--theme-color), var(--theme-color)); /* マーカーの色を指定 */
+  background-repeat: no-repeat;
+  background-position: left bottom; /* マーカーの発生位置を左下に設定 */
+  background-size: 0 100%; /* マーカーの横幅 / 縦幅 */
+  transition: all 0.2s ease; /* マーカーを引く速度 */
+  cursor: pointer; /* ホバー時のカーソルをポインターにする */
+}
+
+a:hover{
+  color: #fff;
+  text-decoration: none;
+  background-size: 100% 100%;
 }
 
 /* --------------------
@@ -108,7 +131,37 @@ a {
 
 ul li::marker {
   left: -10px;
-  color: var(--theme-color);  /* 点の色をピンク系に変更 */
+  color: var(--sub-color);  /* 点の色を変更 */
+}
+
+/* --------------------
+        ボックス
+-------------------- */
+
+.box {
+    position: relative;
+    margin: 2em 0;
+    padding: 1em 1em;
+    border: solid 3px var(--theme-color);
+    border-radius: 5px;
+}
+.box .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -30px;
+    left: 6px;
+    padding: 0 9px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+    background: var(--theme-color);
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.box p {
+    margin: 0; 
+    padding: 0;
 }
 
 /* --------------------
@@ -175,7 +228,7 @@ ul li::marker {
   margin: 1rem;
   padding: 0.5rem;
   text-align: center;
-  background:var(--sub-color);
+  background: var(--sub-color);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -183,7 +236,7 @@ ul li::marker {
 }
 
 .read-more:hover {
-  background: #999;
+  background: #333;
 }
 
 /* --------------------
@@ -204,7 +257,7 @@ tr:nth-child(2n) {
   background-color: #f9f9f9;
 }
 th {
-  background: var(--theme-color);
+  background: var(--sub-color);
   color: #fff;
 }
 th {
